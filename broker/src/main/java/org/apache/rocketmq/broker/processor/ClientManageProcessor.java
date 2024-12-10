@@ -242,8 +242,7 @@ public class ClientManageProcessor implements NettyRequestProcessor {
         return response;
     }
 
-    public RemotingCommand checkClientConfig(ChannelHandlerContext ctx, RemotingCommand request)
-        throws RemotingCommandException {
+    public RemotingCommand checkClientConfig(ChannelHandlerContext ctx, RemotingCommand request) {
         final RemotingCommand response = RemotingCommand.createResponseCommand(null);
 
         CheckClientRequestBody requestBody = CheckClientRequestBody.decode(request.getBody(),
